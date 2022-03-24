@@ -29,7 +29,6 @@ const Products = () => {
                 <div className="row">
                     <div className="col-12 mb-1">
                         <h1 className="display-6 fw-bolder text-center">Best Seller Products</h1>
-                        <hr />
                         <div className="input">
                         <input type="text" className="form-control my-5 rounded" id="search" placeholder="Explore your favorite shoes..."
                            onChange={(search) => searchItems(search.target.value)}

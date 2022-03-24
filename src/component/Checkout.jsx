@@ -1,9 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { del } from '../redux/action';
 
 const Checkout = () => {
-    const state = useSelector((state)=> state.handleCart)
+    const state= useSelector((state)=> state.handleCart)
 
     var total = 0;
     var harga = 0;
@@ -19,6 +20,10 @@ const Checkout = () => {
                 <span className="text-dark fst-normal">${harga}</span>
             </li>
         )
+    }
+
+    const del = () =>{
+        state = []
     }
 
     return (
@@ -40,6 +45,7 @@ const Checkout = () => {
                         </ul>
 
                         <div className="card p-2">
+                            {/* <button onClick={() => del()} className="btn btn-dark btn-lg w-100" id="light">Continue to checkout</button> */}
                             <NavLink to='/success' className="btn btn-dark btn-lg w-100" id="light">Continue to checkout</NavLink>
                         </div>
                     </div>
