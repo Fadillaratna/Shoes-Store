@@ -8,20 +8,22 @@ import data from '../data/data';
 const Products = () => {
     const { products } = data
     const [search, setSearch] = useState('')
-    const [filteredResults, setFilteredResults] = useState([])
+    const [filteredResults, setFilteredResults] = useState(products)
 
     const searchItems = (searched) => {
         setSearch(searched)
-        const results = products.filter((product) => product.title.toLowerCase().includes(searched.toLowerCase()))
-
-        setFilteredResults(results)
+        const filtered = products.filter((product) => product.title.toLowerCase().includes(searched.toLowerCase()))
+        setFilteredResults(filtered)
     }
+
+ 
 
     const dispatch = useDispatch();
     const addProduct = (product) => {
         dispatch(addCart(product))
     }
 
+    
 
     return (
         <div>
@@ -31,7 +33,7 @@ const Products = () => {
                         <h1 className="display-6 fw-bolder text-center">Best Seller Products</h1>
                         <div className="input">
                         <input type="text" className="form-control my-5 rounded" id="search" placeholder="Explore your favorite shoes..."
-                           onChange={(search) => searchItems(search.target.value)}
+                           onChange={(event) => searchItems(event.target.value)}
                         />
                     </div>
                     </div>
@@ -40,13 +42,13 @@ const Products = () => {
                     {
                         search.length > 1 ? (
                             filteredResults.map((product) => (
-                                <div className="col-md-3 mb-4 py-4 my-5" id="p">
+                                <div className="col-md-3 mb-4 py-1 my-1" id="p">
                                 <div class="card h-100 text-left p-4" key={product.id}>
                                     <img src={product.image} class="card-img-top" alt={product.title} height="250px" />
                                     <div class="card-body">
                                         <h5 class="card-title mb-0">{product.title.substring(0,12)}...</h5>
                                         <p class="card-text lead fw-bold">${product.price}</p>
-                                        <button className="btn btn-outline-dark px-4 py-2" onClick={()=>addProduct(product)} id="dark">Add to Cart</button>
+                                        <button className="btn btn-outline-dark px-4 py-2" onClick={()=>addProduct(product)} id="light">Add to Cart</button>
                                     </div>
                                 </div>
                             </div>

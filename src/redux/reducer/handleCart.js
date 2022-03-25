@@ -39,6 +39,10 @@ const handleCart = (state = cart, action) =>{
             break;
     }
 
+    if(action.type === "checkout"){
+         return state = []
+    }
+
    
 
 }

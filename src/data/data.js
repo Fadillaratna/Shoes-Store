@@ -28,6 +28,20 @@ const data = {
             image: "https://cdn.flightclub.com/750/TEMPLATE/294745/1.jpg",
             description : "The DUNK LOW COURT PURPLE emerges with a Chicago Bulls mix of hues. Built with tumbled leather, the shoe's upper appears in Gym Red, with a metallic finish on the tonal eyelets. A white basketball-textured mudguard contrasts the look while supporting the fit, with black on the inner lining and heel pull-loop. Underfoot, full-length Zoom Air in the phylon midsole provides cushioning, giving way to herringbone pods on the rubber outsole for traction."
         },
+        {
+            id: '5',
+            title: 'DUNK LOW COURT PURPLE',
+            price: 200.0,
+            image: "https://cdn.flightclub.com/750/TEMPLATE/294745/1.jpg",
+            description : "The DUNK LOW COURT PURPLE emerges with a Chicago Bulls mix of hues. Built with tumbled leather, the shoe's upper appears in Gym Red, with a metallic finish on the tonal eyelets. A white basketball-textured mudguard contrasts the look while supporting the fit, with black on the inner lining and heel pull-loop. Underfoot, full-length Zoom Air in the phylon midsole provides cushioning, giving way to herringbone pods on the rubber outsole for traction."
+        },
+        {
+            id: '6',
+            title: 'DUNK LOW COURT PURPLE',
+            price: 200.0,
+            image: "https://cdn.flightclub.com/750/TEMPLATE/294745/1.jpg",
+            description : "The DUNK LOW COURT PURPLE emerges with a Chicago Bulls mix of hues. Built with tumbled leather, the shoe's upper appears in Gym Red, with a metallic finish on the tonal eyelets. A white basketball-textured mudguard contrasts the look while supporting the fit, with black on the inner lining and heel pull-loop. Underfoot, full-length Zoom Air in the phylon midsole provides cushioning, giving way to herringbone pods on the rubber outsole for traction."
+        },
         
        
     ]

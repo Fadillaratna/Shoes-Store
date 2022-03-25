@@ -5,7 +5,6 @@ import { delCart } from '../redux/action/';
 import handleCart from '../redux/reducer/handleCart';
 import { addCart } from '../redux/action/index';
 import { NavLink } from 'react-router-dom';
-import { del } from '../redux/action/index';
 
 const Cart = () => {
     const state = useSelector((state)=> state.handleCart)
@@ -19,6 +18,7 @@ const Cart = () => {
         dispatch(addCart(product))
     }
 
+   
     const product = (product) =>{
         return(
 
