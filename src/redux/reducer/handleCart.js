@@ -33,15 +33,15 @@ const handleCart = (state = cart, action) =>{
             
             break;
         
+        case "CHECKOUT":
+            return []
+            break;
         
         default:
             return state;
             break;
     }
 
-    if(action.type === "checkout"){
-         return state = []
-    }
 
    
 

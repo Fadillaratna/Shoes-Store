@@ -17,8 +17,8 @@ export const delCart = (product) => {
 
 export const checkout = () => {
     return{
-        type : "checkout"
-        
+        type : "CHECKOUT",
+
     }
 }
 

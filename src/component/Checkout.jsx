@@ -1,9 +1,19 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import {useDispatch } from 'react-redux';
+import { checkout } from '../redux/action';
 
 const Checkout = () => {
     const state= useSelector((state)=> state.handleCart)
+
+    const dispatch = useDispatch();
+
+    const out = () => {
+        window.location.href = "/success"
+        dispatch(checkout())
+        
+    }
     
     var total = 0;
     var harga = 0;
@@ -43,8 +53,8 @@ const Checkout = () => {
                         </ul>
 
                         <div className="card p-2">
-                            {/* <button onClick={() => checkout()} className="btn btn-dark btn-lg w-100" id="light">Continue to checkout</button> */}
-                            <NavLink to="/success" className="btn btn-dark btn-lg w-100" id="light">Continue to checkout</NavLink>
+                            <button onClick={() => out()} className="btn btn-dark btn-lg w-100" id="light">Continue to checkout</button>
+                            {/* <NavLink to="/success" className="btn btn-dark btn-lg w-100" id="light">Continue to checkout</NavLink> */}
                         </div>
                     </div>
 
