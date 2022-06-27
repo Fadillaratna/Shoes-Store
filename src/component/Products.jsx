@@ -48,7 +48,7 @@ const Products = () => {
                                     <div class="card-body">
                                         <h5 class="card-title mb-0">{product.title.substring(0,12)}...</h5>
                                         <p class="card-text lead fw-bold">${product.price}</p>
-                                        <button className="btn btn-outline-dark px-4 py-2" onClick={()=>addProduct(product)} id="light">Add to Cart</button>
+                                        <button className="btn btn-dark px-4 py-2" onClick={()=>addProduct(product)} id="light">Add to Cart</button>
                                     </div>
                                 </div>
                             </div>

@@ -10,9 +10,10 @@ const Checkout = () => {
     const dispatch = useDispatch();
 
     const out = () => {
-        window.location.href = "/success"
-        dispatch(checkout())
-        
+        if (window.confirm("Are you sure to checkout your cart?")) {
+            window.location.href = "/success"
+            dispatch(checkout())
+        }
     }
     
     var total = 0;
